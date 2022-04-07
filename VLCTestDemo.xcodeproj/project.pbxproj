@@ -45,8 +45,8 @@
 		B5D7CF7027FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */; };
 		B5D7CF7227FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */; };
 		B5D7CF7327FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */; };
-		B5D7CF7727FC3EA1008D1D8F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7627FC3EA1008D1D8F /* PlayerView.swift */; };
-		B5D7CF7827FC3EA1008D1D8F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7627FC3EA1008D1D8F /* PlayerView.swift */; };
+		B5D7CF7727FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */; };
+		B5D7CF7827FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */; };
 		B5D7CF7B27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7927FC4953008D1D8F /* AVPlayerViewControllerExtension.swift */; };
 		B5D7CF7C27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7927FC4953008D1D8F /* AVPlayerViewControllerExtension.swift */; };
 		B5D7CF7D27FC4953008D1D8F /* Subtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7A27FC4953008D1D8F /* Subtitles.swift */; };
@@ -114,7 +114,7 @@
 		B5A1F37827FE940200C400A0 /* trailer_720p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_720p.mov; sourceTree = "<group>"; };
 		B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSelection.swift; sourceTree = "<group>"; };
-		B5D7CF7627FC3EA1008D1D8F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerView.swift; sourceTree = "<group>"; };
 		B5D7CF7927FC4953008D1D8F /* AVPlayerViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerViewControllerExtension.swift; sourceTree = "<group>"; };
 		B5D7CF7A27FC4953008D1D8F /* Subtitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitles.swift; sourceTree = "<group>"; };
 		B5D7CF8027FC4AB3008D1D8F /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
@@ -200,11 +200,8 @@
 		B5084E1527FAE50B0072677B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B5084E1627FAE50B0072677B /* VLCTestDemoApp.swift */,
-				B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */,
-				B5D7CF7F27FC4959008D1D8F /* AVPlayer+Subtitles */,
+				B5A1F37D27FE992400C400A0 /* Main */,
 				B5D7CF7527FC39CA008D1D8F /* VideoPlayer */,
-				B5A1F37427FE93B800C400A0 /* Resources */,
 				B5084E1827FAE5160072677B /* Assets.xcassets */,
 				B5084E7827FAECA50072677B /* header.m */,
 				B5084E7627FAECA50072677B /* VLCTestDemo (iOS)-Bridging-Header.h */,
@@ -258,13 +255,40 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B5A1F37B27FE98DC00C400A0 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B5D7CF7F27FC4959008D1D8F /* AVPlayer+Subtitles */,
+				B5D7CF8027FC4AB3008D1D8F /* AVPlayerView.swift */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		B5A1F37C27FE98FF00C400A0 /* VLCKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */,
+			);
+			path = VLCKit;
+			sourceTree = "<group>";
+		};
+		B5A1F37D27FE992400C400A0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B5084E1627FAE50B0072677B /* VLCTestDemoApp.swift */,
+				B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		B5D7CF7527FC39CA008D1D8F /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1F37C27FE98FF00C400A0 /* VLCKit */,
+				B5A1F37B27FE98DC00C400A0 /* AVPlayer */,
+				B5A1F37427FE93B800C400A0 /* Resources */,
 				B5084E1727FAE50B0072677B /* DemoVideoPlayer.swift */,
 				B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */,
-				B5D7CF7627FC3EA1008D1D8F /* PlayerView.swift */,
-				B5D7CF8027FC4AB3008D1D8F /* AVPlayerView.swift */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -538,7 +562,7 @@
 				B5D7CF7D27FC4953008D1D8F /* Subtitles.swift in Sources */,
 				B5D7CF6F27FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */,
 				B5084E4027FAE5160072677B /* DemoVideoPlayer.swift in Sources */,
-				B5D7CF7727FC3EA1008D1D8F /* PlayerView.swift in Sources */,
+				B5D7CF7727FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */,
 				B5084E3E27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8127FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
 				B5D7CF7B27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,
@@ -554,7 +578,7 @@
 				B5D7CF7E27FC4953008D1D8F /* Subtitles.swift in Sources */,
 				B5D7CF7027FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */,
 				B5084E4127FAE5160072677B /* DemoVideoPlayer.swift in Sources */,
-				B5D7CF7827FC3EA1008D1D8F /* PlayerView.swift in Sources */,
+				B5D7CF7827FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */,
 				B5084E3F27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8227FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
 				B5D7CF7C27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,

@@ -17,7 +17,7 @@ final class VideoPlayerViewModel: NSObject, ObservableObject {
     var subtitleURLList: [URL]
     var selectedSubtitleURL: URL?
     var playerType: PlayerType
-    var playerView: PlayerView?
+    var playerView: VLCPlayerView?
     var avPlayerView: AVPlayerView?
     
     init(videoPath: String, subtitleURLList: [URL], playerType: PlayerType) {
@@ -28,7 +28,7 @@ final class VideoPlayerViewModel: NSObject, ObservableObject {
         
         switch playerType {
         case .VLC:
-            self.playerView = PlayerView(urlPath: videoPath, subtitleURL: selectedSubtitleURL)
+            self.playerView = VLCPlayerView(urlPath: videoPath, subtitleURL: selectedSubtitleURL)
         case .AVPlayer:
             self.avPlayerView = AVPlayerView(videoURL: URL(fileURLWithPath: videoPath), subtitleURL: selectedSubtitleURL!)
         }

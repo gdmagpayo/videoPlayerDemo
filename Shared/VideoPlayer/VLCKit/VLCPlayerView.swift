@@ -2,7 +2,7 @@ import SwiftUI
 import MobileVLCKit
 import AVKit
 
-struct PlayerView: UIViewRepresentable {
+struct VLCPlayerView: UIViewRepresentable {
     
     public var urlPath: String
     public var subtitleURL: URL?
@@ -22,8 +22,13 @@ struct PlayerView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<VLCPlayerView>) {
     }
+    
+}
+
+//MARK: - Controls
+extension VLCPlayerView {
     
     func play() {
         guard !mediaPlayer.isPlaying else {
@@ -37,10 +42,6 @@ struct PlayerView: UIViewRepresentable {
     func stop() {
         mediaPlayer.stop()
     }
-}
-
-//MARK: - Controls
-extension PlayerView {
     
     func takeScreenshot() {
         print("TAKE SCREENSHOT! - \(urlPath)")
