@@ -15,8 +15,6 @@
 		B5084E3D27FAE5160072677B /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084E3C27FAE5160072677B /* Tests_macOSLaunchTests.swift */; };
 		B5084E3E27FAE5160072677B /* VLCTestDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084E1627FAE50B0072677B /* VLCTestDemoApp.swift */; };
 		B5084E3F27FAE5160072677B /* VLCTestDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084E1627FAE50B0072677B /* VLCTestDemoApp.swift */; };
-		B5084E4027FAE5160072677B /* DemoVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084E1727FAE50B0072677B /* DemoVideoPlayer.swift */; };
-		B5084E4127FAE5160072677B /* DemoVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084E1727FAE50B0072677B /* DemoVideoPlayer.swift */; };
 		B5084E4227FAE5160072677B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5084E1827FAE5160072677B /* Assets.xcassets */; };
 		B5084E4327FAE5160072677B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5084E1827FAE5160072677B /* Assets.xcassets */; };
 		B5084E5327FAE9710072677B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5084E5227FAE9710072677B /* AudioToolbox.framework */; };
@@ -41,6 +39,12 @@
 		B5084E7A27FAECA50072677B /* header.m in Sources */ = {isa = PBXBuildFile; fileRef = B5084E7827FAECA50072677B /* header.m */; };
 		B5A1F37927FE940200C400A0 /* trailer_720p.mov in Resources */ = {isa = PBXBuildFile; fileRef = B5A1F37827FE940200C400A0 /* trailer_720p.mov */; };
 		B5A1F37A27FE940200C400A0 /* trailer_720p.mov in Resources */ = {isa = PBXBuildFile; fileRef = B5A1F37827FE940200C400A0 /* trailer_720p.mov */; };
+		B5A1F37F27FEB14900C400A0 /* VLCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */; };
+		B5A1F38027FEB14900C400A0 /* VLCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */; };
+		B5A1F38227FEB2C400C400A0 /* VideoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38127FEB2C400C400A0 /* VideoResource.swift */; };
+		B5A1F38327FEB2C400C400A0 /* VideoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38127FEB2C400C400A0 /* VideoResource.swift */; };
+		B5A1F38527FEB7F400C400A0 /* AVNativePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */; };
+		B5A1F38627FEB7F400C400A0 /* AVNativePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */; };
 		B5D7CF6F27FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */; };
 		B5D7CF7027FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */; };
 		B5D7CF7227FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */; };
@@ -79,7 +83,6 @@
 		5CAB9FE6656BB9C868D06E2E /* Pods_VLCTestDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VLCTestDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799641EE4BA65D51D72BB37E /* Pods_VLCTestDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VLCTestDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5084E1627FAE50B0072677B /* VLCTestDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCTestDemoApp.swift; sourceTree = "<group>"; };
-		B5084E1727FAE50B0072677B /* DemoVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVideoPlayer.swift; sourceTree = "<group>"; };
 		B5084E1827FAE5160072677B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5084E1D27FAE5160072677B /* VLCTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5084E2327FAE5160072677B /* VLCTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +115,9 @@
 		B5084E7727FAECA50072677B /* VLCTestDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VLCTestDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5084E7827FAECA50072677B /* header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = header.m; sourceTree = "<group>"; };
 		B5A1F37827FE940200C400A0 /* trailer_720p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_720p.mov; sourceTree = "<group>"; };
+		B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayer.swift; sourceTree = "<group>"; };
+		B5A1F38127FEB2C400C400A0 /* VideoResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResource.swift; sourceTree = "<group>"; };
+		B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVNativePlayer.swift; sourceTree = "<group>"; };
 		B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSelection.swift; sourceTree = "<group>"; };
 		B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerView.swift; sourceTree = "<group>"; };
@@ -250,6 +256,7 @@
 		B5A1F37427FE93B800C400A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1F38127FEB2C400C400A0 /* VideoResource.swift */,
 				B5A1F37827FE940200C400A0 /* trailer_720p.mov */,
 			);
 			path = Resources;
@@ -260,6 +267,7 @@
 			children = (
 				B5D7CF7F27FC4959008D1D8F /* AVPlayer+Subtitles */,
 				B5D7CF8027FC4AB3008D1D8F /* AVPlayerView.swift */,
+				B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 		B5A1F37C27FE98FF00C400A0 /* VLCKit */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */,
 				B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */,
 			);
 			path = VLCKit;
@@ -281,14 +290,21 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		B5A1F38727FEB92B00C400A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B5D7CF7527FC39CA008D1D8F /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1F38727FEB92B00C400A0 /* ViewModel */,
 				B5A1F37C27FE98FF00C400A0 /* VLCKit */,
 				B5A1F37B27FE98DC00C400A0 /* AVPlayer */,
 				B5A1F37427FE93B800C400A0 /* Resources */,
-				B5084E1727FAE50B0072677B /* DemoVideoPlayer.swift */,
-				B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -561,11 +577,13 @@
 				B5084E7927FAECA50072677B /* header.m in Sources */,
 				B5D7CF7D27FC4953008D1D8F /* Subtitles.swift in Sources */,
 				B5D7CF6F27FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */,
-				B5084E4027FAE5160072677B /* DemoVideoPlayer.swift in Sources */,
+				B5A1F37F27FEB14900C400A0 /* VLCPlayer.swift in Sources */,
 				B5D7CF7727FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */,
+				B5A1F38527FEB7F400C400A0 /* AVNativePlayer.swift in Sources */,
 				B5084E3E27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8127FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
 				B5D7CF7B27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,
+				B5A1F38227FEB2C400C400A0 /* VideoResource.swift in Sources */,
 				B5D7CF7227FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,11 +595,13 @@
 				B5084E7A27FAECA50072677B /* header.m in Sources */,
 				B5D7CF7E27FC4953008D1D8F /* Subtitles.swift in Sources */,
 				B5D7CF7027FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */,
-				B5084E4127FAE5160072677B /* DemoVideoPlayer.swift in Sources */,
+				B5A1F38027FEB14900C400A0 /* VLCPlayer.swift in Sources */,
 				B5D7CF7827FC3EA1008D1D8F /* VLCPlayerView.swift in Sources */,
+				B5A1F38627FEB7F400C400A0 /* AVNativePlayer.swift in Sources */,
 				B5084E3F27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8227FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
 				B5D7CF7C27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,
+				B5A1F38327FEB2C400C400A0 /* VideoResource.swift in Sources */,
 				B5D7CF7327FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

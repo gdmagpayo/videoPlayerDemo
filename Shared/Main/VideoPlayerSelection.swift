@@ -8,24 +8,40 @@
 import SwiftUI
 
 struct VideoPlayerSelection: View {
-    let subtitleRemoteUrl = URL(string: "https://raw.githubusercontent.com/furkanhatipoglu/AVPlayerViewController-Subtitles/master/Example/AVPlayerViewController-Subtitles/trailer_720p.srt")
-    let videoPath = Bundle.main.path(forResource: "trailer_720p", ofType: "mov")
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    NavigationLink(destination: DemoVideoPlayer(viewModel: VideoPlayerViewModel(videoPath: videoPath!, subtitleURLList: [subtitleRemoteUrl!], playerType: .AVPlayer))) {
-                        Text("AVPlayer")
+                    
+                    VideoPlayerOption(title: "AVPlayer") {
+                        AVNativePlayer(viewModel: VideoPlayerViewModel(player: .AVPlayer,
+                                                                       videoPath: VideoResource.videoPath!,
+                                                                       subtitleURLList: [VideoResource.subtitleURL!]))
                     }
-                    NavigationLink(destination: DemoVideoPlayer(viewModel: VideoPlayerViewModel(videoPath: videoPath!, subtitleURLList: [subtitleRemoteUrl!], playerType: .VLC))) {
-                        Text("VLCKit")
+                    
+                    VideoPlayerOption(title: "VLCKit") {
+                        VLCPlayer(viewModel: VideoPlayerViewModel(player: .VLC,
+                                                                  videoPath: VideoResource.videoPath!,
+                                                                  subtitleURLList: [VideoResource.subtitleURL!]))
                     }
+
                 }
             }
             .navigationTitle("Select Video Player")
             .navigationBarTitleDisplayMode(.automatic)
             
+        }
+    }
+}
+
+struct VideoPlayerOption<Content: View>: View {
+    var title: String
+    @ViewBuilder var destination: Content
+    
+    var body: some View {
+        NavigationLink(destination: destination) {
+            Text(title)
         }
     }
 }
