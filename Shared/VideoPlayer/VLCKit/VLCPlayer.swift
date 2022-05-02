@@ -10,33 +10,39 @@ import MobileVLCKit
 import AVKit
 
 struct VLCPlayer: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel: VideoPlayerViewModel
     
     var body: some View {
-        VStack {
+        ZStack {
+            
+            Color.white.ignoresSafeArea()
+
+            VLCPlayerTopBar(viewModel: VLCPlayerTopBarViewModel(videoTitle: viewModel.video.name)) {
+                self.dismiss()
+            }
+            .ignoresSafeArea()
+            .zIndex(1)
+            
             viewModel.vlcPlayerView
                 .onTapGesture {
                     viewModel.vlcPlayerView!.play()
-                }
-            
-            Button {
-                let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                impactMed.impactOccurred()
-
-                viewModel.vlcPlayerView!.takeScreenshot()
-
-            } label: {
-                Text("Take a screenshot")
-                    .padding()
-            }
-        }.onDisappear {
+                }.zIndex(0)
+        }
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
+        .onDisappear {
             viewModel.stopPlaying()
         }
+    }
+    
+    func dismiss() {
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct VLCPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        VLCPlayer(viewModel: VideoPlayerViewModel(player: .VLC, videoPath: VideoResource.videoPath!, subtitleURLList: nil))
+        VLCPlayer(viewModel: VideoPlayerViewModel(player: .VLC, video: VideoResource.getVideo()))
     }
 }

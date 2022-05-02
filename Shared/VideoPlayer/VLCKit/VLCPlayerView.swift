@@ -13,12 +13,15 @@ struct VLCPlayerView: UIViewRepresentable {
         
         let view = UIView()
         mediaPlayer.drawable = view
+
         let media = VLCMedia(path: urlPath)
         mediaPlayer.media = media
         
         if let subtitleURL = subtitleURL {
             mediaPlayer.addPlaybackSlave(subtitleURL, type: .subtitle, enforce: true)
         }
+        
+        mediaPlayer.play()
         return view
     }
     
@@ -29,7 +32,6 @@ struct VLCPlayerView: UIViewRepresentable {
 
 //MARK: - Controls
 extension VLCPlayerView {
-    
     func play() {
         guard !mediaPlayer.isPlaying else {
             mediaPlayer.pause()

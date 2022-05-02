@@ -15,15 +15,11 @@ struct VideoPlayerSelection: View {
                 Section {
                     
                     VideoPlayerOption(title: "AVPlayer") {
-                        AVNativePlayer(viewModel: VideoPlayerViewModel(player: .AVPlayer,
-                                                                       videoPath: VideoResource.videoPath!,
-                                                                       subtitleURLList: [VideoResource.subtitleURL!]))
+                        AVNativePlayer(viewModel: VideoPlayerViewModel(player: .AVPlayer, video: VideoResource.getVideo()))
                     }
                     
                     VideoPlayerOption(title: "VLCKit") {
-                        VLCPlayer(viewModel: VideoPlayerViewModel(player: .VLC,
-                                                                  videoPath: VideoResource.videoPath!,
-                                                                  subtitleURLList: [VideoResource.subtitleURL!]))
+                        VLCPlayer(viewModel: VideoPlayerViewModel(player: .VLC, video: VideoResource.getVideo()))
                     }
 
                 }

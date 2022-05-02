@@ -45,6 +45,12 @@
 		B5A1F38327FEB2C400C400A0 /* VideoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38127FEB2C400C400A0 /* VideoResource.swift */; };
 		B5A1F38527FEB7F400C400A0 /* AVNativePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */; };
 		B5A1F38627FEB7F400C400A0 /* AVNativePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */; };
+		B5A1F38B27FED18100C400A0 /* VLCPlayerTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38A27FED18100C400A0 /* VLCPlayerTopBar.swift */; };
+		B5A1F38C27FED18100C400A0 /* VLCPlayerTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1F38A27FED18100C400A0 /* VLCPlayerTopBar.swift */; };
+		B5A1F39427FEEB1700C400A0 /* trailer_720p.srt in Resources */ = {isa = PBXBuildFile; fileRef = B5A1F39327FEEB1700C400A0 /* trailer_720p.srt */; };
+		B5A1F39527FEEB1700C400A0 /* trailer_720p.srt in Resources */ = {isa = PBXBuildFile; fileRef = B5A1F39327FEEB1700C400A0 /* trailer_720p.srt */; };
+		B5C59FBD27FFDF810071773D /* VLCPlayerTopBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C59FBC27FFDF810071773D /* VLCPlayerTopBarViewModel.swift */; };
+		B5C59FBE27FFDF810071773D /* VLCPlayerTopBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C59FBC27FFDF810071773D /* VLCPlayerTopBarViewModel.swift */; };
 		B5D7CF6F27FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */; };
 		B5D7CF7027FC201F008D1D8F /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */; };
 		B5D7CF7227FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */; };
@@ -118,6 +124,9 @@
 		B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayer.swift; sourceTree = "<group>"; };
 		B5A1F38127FEB2C400C400A0 /* VideoResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResource.swift; sourceTree = "<group>"; };
 		B5A1F38427FEB7F400C400A0 /* AVNativePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVNativePlayer.swift; sourceTree = "<group>"; };
+		B5A1F38A27FED18100C400A0 /* VLCPlayerTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerTopBar.swift; sourceTree = "<group>"; };
+		B5A1F39327FEEB1700C400A0 /* trailer_720p.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trailer_720p.srt; sourceTree = "<group>"; };
+		B5C59FBC27FFDF810071773D /* VLCPlayerTopBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerTopBarViewModel.swift; sourceTree = "<group>"; };
 		B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		B5D7CF7127FC3076008D1D8F /* VideoPlayerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSelection.swift; sourceTree = "<group>"; };
 		B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerView.swift; sourceTree = "<group>"; };
@@ -256,6 +265,7 @@
 		B5A1F37427FE93B800C400A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1F39327FEEB1700C400A0 /* trailer_720p.srt */,
 				B5A1F38127FEB2C400C400A0 /* VideoResource.swift */,
 				B5A1F37827FE940200C400A0 /* trailer_720p.mov */,
 			);
@@ -277,6 +287,7 @@
 			children = (
 				B5A1F37E27FEB14900C400A0 /* VLCPlayer.swift */,
 				B5D7CF7627FC3EA1008D1D8F /* VLCPlayerView.swift */,
+				B5C59FBB27FFDF5C0071773D /* Control Bars */,
 			);
 			path = VLCKit;
 			sourceTree = "<group>";
@@ -296,6 +307,23 @@
 				B5D7CF6E27FC201F008D1D8F /* VideoPlayerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B5AF6615281FA13F007B05DC /* Top bar */ = {
+			isa = PBXGroup;
+			children = (
+				B5A1F38A27FED18100C400A0 /* VLCPlayerTopBar.swift */,
+				B5C59FBC27FFDF810071773D /* VLCPlayerTopBarViewModel.swift */,
+			);
+			path = "Top bar";
+			sourceTree = "<group>";
+		};
+		B5C59FBB27FFDF5C0071773D /* Control Bars */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF6615281FA13F007B05DC /* Top bar */,
+			);
+			path = "Control Bars";
 			sourceTree = "<group>";
 		};
 		B5D7CF7527FC39CA008D1D8F /* VideoPlayer */ = {
@@ -477,6 +505,7 @@
 			files = (
 				B5084E4227FAE5160072677B /* Assets.xcassets in Resources */,
 				B5A1F37927FE940200C400A0 /* trailer_720p.mov in Resources */,
+				B5A1F39427FEEB1700C400A0 /* trailer_720p.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +515,7 @@
 			files = (
 				B5084E4327FAE5160072677B /* Assets.xcassets in Resources */,
 				B5A1F37A27FE940200C400A0 /* trailer_720p.mov in Resources */,
+				B5A1F39527FEEB1700C400A0 /* trailer_720p.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +612,10 @@
 				B5A1F38527FEB7F400C400A0 /* AVNativePlayer.swift in Sources */,
 				B5084E3E27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8127FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
+				B5C59FBD27FFDF810071773D /* VLCPlayerTopBarViewModel.swift in Sources */,
 				B5D7CF7B27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,
 				B5A1F38227FEB2C400C400A0 /* VideoResource.swift in Sources */,
+				B5A1F38B27FED18100C400A0 /* VLCPlayerTopBar.swift in Sources */,
 				B5D7CF7227FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,8 +632,10 @@
 				B5A1F38627FEB7F400C400A0 /* AVNativePlayer.swift in Sources */,
 				B5084E3F27FAE5160072677B /* VLCTestDemoApp.swift in Sources */,
 				B5D7CF8227FC4AB3008D1D8F /* AVPlayerView.swift in Sources */,
+				B5C59FBE27FFDF810071773D /* VLCPlayerTopBarViewModel.swift in Sources */,
 				B5D7CF7C27FC4953008D1D8F /* AVPlayerViewControllerExtension.swift in Sources */,
 				B5A1F38327FEB2C400C400A0 /* VideoResource.swift in Sources */,
+				B5A1F38C27FED18100C400A0 /* VLCPlayerTopBar.swift in Sources */,
 				B5D7CF7327FC3076008D1D8F /* VideoPlayerSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

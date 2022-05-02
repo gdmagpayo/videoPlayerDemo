@@ -13,25 +13,23 @@ enum PlayerType {
 }
 
 final class VideoPlayerViewModel: NSObject, ObservableObject {
-    var videoPath: String
-    var subtitleURLList: [URL]?
+    var video: Video
     var selectedSubtitleURL: URL?
     
     var playerType: PlayerType
     var vlcPlayerView: VLCPlayerView?
     var avPlayerView: AVPlayerView?
     
-    init(player: PlayerType, videoPath: String, subtitleURLList: [URL]?) {
-        self.videoPath = videoPath
-        self.subtitleURLList = subtitleURLList
-        selectedSubtitleURL = subtitleURLList?.first ?? nil
+    init(player: PlayerType, video: Video) {
+        self.video = video
+        selectedSubtitleURL = self.video.subTitleList?.first ?? nil
         playerType = player
         
         switch playerType {
         case .VLC:
-            vlcPlayerView = VLCPlayerView(urlPath: videoPath, subtitleURL: selectedSubtitleURL)
+            vlcPlayerView = VLCPlayerView(urlPath: video.path, subtitleURL: selectedSubtitleURL)
         case .AVPlayer:
-            avPlayerView = AVPlayerView(videoURL: URL(fileURLWithPath: videoPath), subtitleURL: selectedSubtitleURL!)
+            avPlayerView = AVPlayerView(videoURL: URL(fileURLWithPath: video.path), subtitleURL: selectedSubtitleURL!)
         }
     }
     

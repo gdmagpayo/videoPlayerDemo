@@ -25,6 +25,6 @@ struct AVNativePlayer: View {
 
 struct AVNativePlayer_Previews: PreviewProvider {
     static var previews: some View {
-        AVNativePlayer(viewModel: VideoPlayerViewModel(player: .AVPlayer, videoPath: VideoResource.videoPath!, subtitleURLList: nil))
+        AVNativePlayer(viewModel: VideoPlayerViewModel(player: .AVPlayer, video: VideoResource.getVideo()))
     }
 }
